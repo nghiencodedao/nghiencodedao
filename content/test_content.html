@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+    <title>React là gì? Và nó hoạt động như thế nào?</title>
+  <meta name="description" content="React là gì? Nó là thư viện JavaScript tốt nhất hiện nay. Hãy cùng tìm hiểu cách hoạt động của nó, ưu điểm và những thông tin quan trọng khác" />
+  <link rel="canonical" href="https://www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="React là gì? Và nó hoạt động như thế nào?" />
+  <meta property="og:description" content="React là gì? Nó là thư viện JavaScript tốt nhất hiện nay. Hãy cùng tìm hiểu cách hoạt động của nó, ưu điểm và những thông tin quan trọng khác" />
+  <meta property="og:url" content="/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao" />
+  <meta property="og:site_name" content="Hướng Dẫn Hostinger" />
+  <meta property="article:published_time" content="2020-03-23T05:07:55+00:00" />
+  <meta property="og:image" content="https://www.hostinger.com/tutorials/wp-content/themes/tutorialsthemeuplift/public/images/no_image.jpg" />
+  <meta name="author" content="Hai G." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.hostinger.com/tutorials/wp-content/themes/tutorialsthemeuplift/public/images/no_image.jpg" />
+  <meta name="twitter:label1" content="Được viết bởi" />
+  <meta name="twitter:data1" content="Hai G." />
+  <meta name="twitter:label2" content="Ước tính thời gian đọc" />
+  <meta name="twitter:data2" content="10 phút" />
+  <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao","url":"https://www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao","name":"React là gì? Và nó hoạt động như thế nào?","isPartOf":{"@id":"https://www.hostinger.vn/huong-dan/#website"},"datePublished":"2020-03-23T05:07:55+00:00","dateModified":"2020-03-23T05:07:55+00:00","author":{"@id":"https://www.hostinger.vn/huong-dan/#/schema/person/d670bbac2b79bdb23f40f35a7a70d7f3"},"description":"React là gì? Nó là thư viện JavaScript tốt nhất hiện nay. Hãy cùng tìm hiểu cách hoạt động của nó, ưu điểm và những thông tin quan trọng khác","breadcrumb":{"@id":"https://www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao#breadcrumb"},"inLanguage":"vi","potentialAction":[{"@type":"ReadAction","target":["https://www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao"]}]},{"@type":"BreadcrumbList","@id":"https://www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.hostinger.vn/huong-dan"},{"@type":"ListItem","position":2,"name":"React là gì? Và nó hoạt động như thế nào?"}]},{"@type":"WebSite","@id":"https://www.hostinger.vn/huong-dan/#website","url":"https://www.hostinger.vn/huong-dan/","name":"Hướng Dẫn Hostinger","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.hostinger.vn/huong-dan/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"vi"},{"@type":"Person","@id":"https://www.hostinger.vn/huong-dan/#/schema/person/d670bbac2b79bdb23f40f35a7a70d7f3","name":"Hai G.","image":{"@type":"ImageObject","inLanguage":"vi","@id":"https://www.hostinger.vn/huong-dan/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/85bf757373952effc77e0ea8caaf0a14?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/85bf757373952effc77e0ea8caaf0a14?s=96&d=mm&r=g","caption":"Hai G."},"description":"Hải G. là chuyên gia quản lý, vận hành các dịch vụ website. Anh có nhiều năm kinh nghiệm về VPS, Hosting, technical SEO, CMS. Đặc biệt yêu thích WordPress và đã dùng nó hơn 5 năm nay. Sở thích của anh là đọc, viết blog, đi du lịch và tư vấn cho các bạn trẻ khởi nghiệp.","url":"https://www.hostinger.vn/huong-dan/author/hghaigiang"}]}</script>
+
+  <link rel='dns-prefetch' href='//facebook.net' />
+  <link rel="alternate" type="application/rss+xml" title="Dòng thông tin Hướng Dẫn Hostinger &raquo;" href="https://www.hostinger.vn/huong-dan/feed" />
+  <link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Hướng Dẫn Hostinger &raquo;" href="https://www.hostinger.vn/huong-dan/comments/feed" />
+  <link rel="alternate" type="application/rss+xml" title="Hướng Dẫn Hostinger &raquo; React là gì? Và nó hoạt động như thế nào? Dòng phản hồi" href="/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao/feed" />
+  <style type="text/css">
+      img.wp-smiley,
+      img.emoji {
+          display: inline !important;
+          border: none !important;
+          box-shadow: none !important;
+          height: 1em !important;
+          width: 1em !important;
+          margin: 0 0.07em !important;
+          vertical-align: -0.1em !important;
+          background: none !important;
+          padding: 0 !important;
+          }
+  </style>
+  <link rel='stylesheet' id='wp-block-library-css' href='https://www.hostinger.vn/huong-dan/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1' type='text/css' media='all' />
+  <link rel='stylesheet' id='classic-theme-styles-css' href='https://www.hostinger.vn/huong-dan/wp-includes/css/classic-themes.min.css?ver=1' type='text/css' media='all' />
+  <style id='global-styles-inline-css' type='text/css'>
+      body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+      .wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+      :where(.wp-block-columns.is-layout-flex){gap: 2em;}
+      .wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+  </style>
+  <link rel='stylesheet' id='ez-toc-css' href='https://www.hostinger.vn/huong-dan/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.40' type='text/css' media='all' />
+  <style id='ez-toc-inline-css' type='text/css'>
+      div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 500;}div#ez-toc-container ul li {font-size: 95%;}div#ez-toc-container nav ul ul li ul li {font-size: %!important;}
+      html, body{ scroll-behavior: smooth; } span.ez-toc-section{ scroll-margin-top: 0px;}
+  </style>
+  <link data-minify="1" rel='stylesheet' id='understrap-styles-css' href='https://www.hostinger.vn/huong-dan/wp-content/cache/min/10/huong-dan/wp-content/themes/tutorialsthemeuplift/public/css/theme.min.css?ver=1661962995' type='text/css' media='all' />
+  <link data-minify="1" rel='stylesheet' id='prismCSS-css' href='https://www.hostinger.vn/huong-dan/wp-content/cache/min/10/huong-dan/wp-content/themes/tutorialsthemeuplift/resources/prism.css?ver=1661963002' type='text/css' media='all' />
+  <script type='text/javascript' id='yoast-seo-base-site-url_js-js-extra'>
+      /* <![CDATA[ */
+      var yoastSeoBaseSiteUrl = {"base_url":"https:\/\/www.hostinger.vn\/huong-dan"};
+      /* ]]> */
+  </script>
+  <script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://www.hostinger.vn/huong-dan/wp-content/cache/min/10/huong-dan/wp-content/themes/tutorialsthemeuplift/resources/js/yoast-seo-base-site-url.js?ver=1661962995' id='yoast-seo-base-site-url_js-js' defer></script>
+  <script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.vn/huong-dan/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js' defer></script>
+  <script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.vn/huong-dan/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js' defer></script>
+  <script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://www.hostinger.vn/huong-dan/wp-content/cache/min/10/huong-dan/wp-content/themes/tutorialsthemeuplift/resources/prism.js?ver=1661963002' id='prismJS-js' defer></script>
+  <link rel="https://api.w.org/" href="https://www.hostinger.vn/huong-dan/wp-json/" /><link rel="alternate" type="application/json" href="https://www.hostinger.vn/huong-dan/wp-json/wp/v2/posts/10099" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hostinger.vn/huong-dan/xmlrpc.php?rsd" />
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.hostinger.vn/huong-dan/wp-includes/wlwmanifest.xml" />
+  <meta name="generator" content="WordPress 6.1.1" />
+  <link rel='shortlink' href='https://www.hostinger.vn/huong-dan/?p=10099' />
+  <link rel="alternate" type="application/json+oembed" href="https://www.hostinger.vn/huong-dan/wp-json/oembed/1.0/embed?url=%2Fhuong-dan%2Freact-la-gi-va-no-hoat-dong-nhu-the-nao" />
+  <link rel="alternate" type="text/xml+oembed" href="https://www.hostinger.vn/huong-dan/wp-json/oembed/1.0/embed?url=%2Fhuong-dan%2Freact-la-gi-va-no-hoat-dong-nhu-the-nao&#038;format=xml" />
+
+  <script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KL4FQVG');</script>
+
+
+  <script type="rocketlazyloadscript">
+            document.addEventListener('DOMContentLoaded', function () {
+                let anchorTags = document.querySelectorAll('.ez-toc-link');
+                anchorTags.forEach(function(element) {
+                    element.text = element.text.replace(':','');
+                });
+            }, false);
+        </script>
+  <link rel="icon" href="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/08/cropped-cropped-hostinger-fav-32x32.png" sizes="32x32" />
+  <link rel="icon" href="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/08/cropped-cropped-hostinger-fav-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/08/cropped-cropped-hostinger-fav-180x180.png" />
+  <meta name="msapplication-TileImage" content="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2017/08/cropped-cropped-hostinger-fav-270x270.png" />
+  <style type="text/css" id="wp-custom-css">
+
+      #ez-toc-container nav ul li {
+          padding-top: 10px;
+          }
+
+  </style>
+  <noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+<body class="post-template-default single single-post postid-10099 single-format-standard wp-embed-responsive">
+<div id="navigation-new">
+  <hmenu-new :menu-items="[{&quot;id&quot;:&quot;mainMenu&quot;,&quot;title&quot;:&quot;Website Hosting&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Hosting&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-hosting&quot;,&quot;dropDown&quot;:true,&quot;items&quot;:[{&quot;title&quot;:&quot;Web Hosting&quot;,&quot;text&quot;:&quot;Cho website v\u1eeba v\u00e0 nh\u1ecf&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/shared-hosting.svg&quot;,&quot;href&quot;:&quot;\/web-hosting&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-web-hosting&quot;},{&quot;title&quot;:&quot;Cloud Hosting&quot;,&quot;text&quot;:&quot;Cho d\u1ef1 \u00e1n l\u1edbn&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/cloud-hosting.svg&quot;,&quot;href&quot;:&quot;\/cloud-hosting&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-cloud-hosting&quot;},{&quot;title&quot;:&quot;WordPress Hosting&quot;,&quot;text&quot;:&quot;Gi\u1ea3i ph\u00e1p t\u1ed1i \u01b0u WordPress hosting.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/wordpress-hosting.svg&quot;,&quot;href&quot;:&quot;\/wordpress-hosting&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-wordpress-hosting&quot;}],&quot;opened&quot;:false},{&quot;title&quot;:&quot;VPS&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-vps&quot;,&quot;dropDown&quot;:true,&quot;items&quot;:[{&quot;title&quot;:&quot;Thu\u00ea VPS&quot;,&quot;text&quot;:&quot;T\u00e0i nguy\u00ean ri\u00eang \u0111\u1ec3 m\u1edf r\u1ed9ng.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/vps-hosting.svg&quot;,&quot;href&quot;:&quot;\/vps&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-vps-hosting&quot;},{&quot;title&quot;:&quot;CyberPanel VPS Hosting&quot;,&quot;text&quot;:&quot;Control panel v\u1edbi Open\/LiteSpeed Webserver.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/cyberpanel-hosting.svg&quot;,&quot;href&quot;:&quot;\/cyberpanel-vps-hosting&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-cyberpanel-hosting&quot;},{&quot;title&quot;:&quot;Minecraft Server Hosting&quot;,&quot;text&quot;:&quot;Chia s\u1ebd kinh nghi\u1ec7m Minecraft.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/hosting\/minecraft-hosting.svg&quot;,&quot;href&quot;:&quot;\/minecraft-server-hosting&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-minecraft-hosting&quot;}],&quot;opened&quot;:false},{&quot;title&quot;:&quot;Email&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-email&quot;,&quot;dropDown&quot;:true,&quot;items&quot;:[{&quot;title&quot;:&quot;Google Workspace&quot;,&quot;text&quot;:&quot;Nh\u1eadn email ri\u00eang v\u1edbi 30GB dung l\u01b0\u1ee3ng.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/email\/google-workspace-hosting.svg&quot;,&quot;href&quot;:&quot;\/google-workspace&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-google-workspace&quot;},{&quot;title&quot;:&quot;Email Doanh Nghi\u1ec7p&quot;,&quot;text&quot;:&quot;Qu\u1ea3ng b\u00e1 th\u01b0\u01a1ng hi\u1ec7u c\u1ee7a b\u1ea1n tr\u00ean m\u1ed7i l\u1ea7n g\u1eedi mail&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/email\/email-hosting.svg&quot;,&quot;href&quot;:&quot;\/email-doanh-nghiep&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-email-hosting&quot;}],&quot;opened&quot;:false},{&quot;title&quot;:&quot;T\u00ean mi\u1ec1n&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-domain&quot;,&quot;dropDown&quot;:true,&quot;items&quot;:[{&quot;title&quot;:&quot;T\u00ecm ki\u1ebfm t\u00ean mi\u1ec1n&quot;,&quot;text&quot;:&quot;T\u00ecm t\u00ean mi\u1ec1n ho\u00e0n h\u1ea3o nh\u1ea5t.&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/domain\/domain-checker.svg&quot;,&quot;href&quot;:&quot;\/ten-mien&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-domain-checker&quot;},{&quot;title&quot;:&quot;WHOIS Domain&quot;,&quot;text&quot;:&quot;C\u00f4ng c\u1ee5 t\u00ecm ki\u1ebfm th\u00f4ng tin WHOIS&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/domain\/whois-database.svg&quot;,&quot;href&quot;:&quot;\/whois&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-whois&quot;},{&quot;title&quot;:&quot;Chuy\u1ec3n T\u00ean Mi\u1ec1n&quot;,&quot;text&quot;:&quot;Mu\u1ed1n chuy\u1ec3n t\u00ean mi\u1ec1n t\u1edbi Hostinger?&quot;,&quot;logo&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/icons\/navbar\/domain\/domain-transfer.svg&quot;,&quot;href&quot;:&quot;\/chuyen-ten-mien&quot;,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-transfer-domain&quot;}],&quot;opened&quot;:false},{&quot;title&quot;:&quot;\u0110\u0103ng nh\u1eadp&quot;,&quot;href&quot;:&quot;\/dang-nhap-cpanel&quot;,&quot;nameIsLogin&quot;:true,&quot;id&quot;:&quot;hgr-tutorials-h-menu-item-cpanel-login&quot;,&quot;material&quot;:&quot;lock&quot;}]},{&quot;id&quot;:&quot;secondaryMenu&quot;,&quot;title&quot;:&quot;Article topics&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;WordPress&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wordpress&quot;},{&quot;title&quot;:&quot;VPS&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/vps&quot;},{&quot;title&quot;:&quot;Joomla&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/joomla&quot;},{&quot;title&quot;:&quot;Email&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/email&quot;},{&quot;title&quot;:&quot;DNS&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/dns&quot;},{&quot;title&quot;:&quot;Thu\u1eadt ng\u1eef&quot;,&quot;href&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/thuat-ngu&quot;}]}]" cart-path="/cart" home-path="/" blog-path="https://www.hostinger.vn/huong-dan" tutorials-name="Hướng dẫn" cart="Giỏ hàng" theme-tld=".vn">
+  </hmenu-new>
+</div>
+<div class="h-pb-2 h-pt-2 justify-content-center primary l700 position-relative w-100 position-absolute" id="submenu">
+  <div class="container d-flex w-100 align-items-center height-16px justify-content-between">
+    <div class="d-flex">
+<span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.vn/huong-dan/wordpress" data-wpel-link="internal">WordPress</a>
+</span>
+      <span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.vn/huong-dan/vps" data-wpel-link="internal">VPS</a>
+</span>
+      <span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.vn/huong-dan/joomla" data-wpel-link="internal">Joomla</a>
+</span>
+      <span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.vn/huong-dan/email" data-wpel-link="internal">Email</a>
+</span>
+      <span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.vn/huong-dan/dns" data-wpel-link="internal">DNS</a>
+</span>
+      <span class="ml-0-md mr-40-md d-block transition-all-3 letter-spacing-1px text-nowrap
+                              hover-opacity-6">
+<a href="https://www.hostinger.vn/huong-dan/thuat-ngu" data-wpel-link="internal">Thuật ngữ</a>
+</span>
+    </div>
+    <div class="d-flex align-items-center">
+      <form id="searchbox" method="get" action="https://www.hostinger.vn/huong-dan/" role="search" class="w-100">
+        <input class="label text-content-grey w-100 mr-20 pr-40" id="s" name="s" type="text" placeholder="Tìm kiếm" value="" />
+      </form>
+      <i onclick="toggleSearch()" id="searchIcon" class="position-relative material-icons ml-auto cursor-pointer">
+        search
+      </i>
+    </div>
+  </div>
+</div>
+<script type="rocketlazyloadscript">
+    var searchbox = document.getElementById("searchbox");
+    var searchBoxVisible = false;
+    if (searchbox) {
+        searchbox.style.display = "none";
+    }
+
+    function toggleSearch() {
+        if (searchbox.style.display === "none") {
+            searchbox.style.display = "block";
+            searchbox.classList.add("fade-in");
+            document.getElementById("s").focus();
+            searchBoxVisible = true;
+        } else {
+            searchbox.style.display = "none";
+            searchBoxVisible = false;
+
+        }
+    }
+
+    function onClickOutside(e) {
+        if (searchBoxVisible && e.target.id !== "searchbox" && e.target.id !== "searchIcon" && e.target.id !== "s") {
+            searchbox.style.display = "none";
+        }
+    }
+
+    window.addEventListener("click", onClickOutside);
+</script>
+<div id="gdpr-consent">
+  <gdpr-banner-bottom :strings="{&quot;banner&quot;:{&quot;body&quot;:{&quot;firstHeading&quot;:&quot;Ch\u00fang t\u00f4i coi tr\u1ecdng quy\u1ec1n ri\u00eang t\u01b0 c\u1ee7a b\u1ea1n&quot;,&quot;firstBody&quot;:&quot;Ch\u00fang t\u00f4i v\u00e0 nh\u1eefng \u0111\u1ed1i t\u00e1c c\u1ee7a ch\u00fang t\u00f4i s\u1eed d\u1ee5ng cookies \u0111\u1ec3 l\u01b0u tr\u1eef v\u00e0 truy xu\u1ea5t d\u1eef li\u1ec7u c\u00e1 nh\u00e2n nh\u01b0 d\u1eef li\u1ec7u tr\u00ecnh duy\u1ec7t cho m\u1ee5c \u0111\u00edch ph\u1ee5c v\u1ee5 v\u00e0 c\u00e1 nh\u00e2n h\u00f3a n\u1ed9i dung v\u00e0 qu\u1ea3ng c\u00e1o v\u00e0 ph\u00e2n t\u00edch truy c\u1eadp site. B\u1ea1n c\u00f3 th\u1ec3 t\u00ecm hi\u1ec3u th\u00eam c\u00e1c m\u1ee5c \u0111\u00edch gi\u1ea3i th\u00edch v\u00ec sao ch\u00fang t\u00f4i v\u00e0 \u0111\u1ed1i t\u00e1c s\u1eed d\u1ee5ng cookies ho\u1eb7c c\u00e1 nh\u00e2n h\u00f3a n\u1ed9i dung cho b\u1ea1n b\u1eb1ng c\u00e1ch nh\u1ea5n n\u00fat `C\u00e0i \u0111\u1eb7t cookies` b\u00ean d\u01b0\u1edbi. B\u1ea1n c\u00f3 th\u1ec3 xem l\u1ea1i c\u00e1c l\u1ef1a ch\u1ecdn m\u00e0 b\u1ea1n \u0111\u00e3 \u0111\u1ed3ng \u00fd ho\u1eb7c r\u00fat l\u1ea1i c\u00e1c l\u1ef1a ch\u1ecdn n\u00e0y b\u1ea5t k\u1ef3 l\u00fac n\u00e0o b\u1eb1ng c\u00e1ch nh\u1ea5p chu\u1ed9t v\u00e0o link t\u1edbi c\u00e0i \u0111\u1eb7t cookies trong ph\u1ea7n Ch\u00ednh S\u00e1ch Cookie. Ch\u00fang t\u00f4i l\u00e0m vi\u1ec7c \u0111\u1ed3ng b\u1ed9 trong ti\u00eau chu\u1ea9n chung, chuy\u1ec3n \u0111\u01b0a t\u00f9y ch\u1ecdn c\u1ee7a b\u1ea1n sang cho t\u1ea5t c\u1ea3 website tham gia. B\u1ea1n c\u00f3 th\u1ec3 t\u00f9y ch\u1ec9nh cookies trong m\u1ee5c &lt;span id='hgr-cookie_consent-show_settings_btn' class='link fs-14 fs-15-sm cursor-pointer'&gt;Cookie Settings&lt;\/span&gt;.&quot;,&quot;secondHeading&quot;:&quot;Ch\u00fang t\u00f4i v\u00e0 \u0111\u1ed1i t\u00e1c c\u1ee7a ch\u00fang t\u00f4i x\u1eed l\u00fd d\u1eef li\u1ec7u:&quot;,&quot;secondBody&quot;:&quot;L\u01b0u tr\u1eef v\u00e0\/ho\u1eb7c truy c\u1eadp th\u00f4ng tin tr\u00ean m\u1ed9t thi\u1ebft. C\u00e1 nh\u00e2n h\u00f3a qu\u1ea3ng c\u00e1o. C\u00e1 nh\u00e2n h\u00f3a n\u1ed9i dung. \u0110o l\u01b0\u1eddng qu\u1ea3ng c\u00e1o v\u00e0 n\u1ed9i dung, hi\u1ec3u v\u1ec1 \u0111\u1ed1i t\u01b0\u1ee3ng m\u1ee5c ti\u00eau, v\u00e0 ph\u00e1t tri\u1ec3n s\u1ea3n ph\u1ea9m. \u0110\u1ec3 t\u00ecm hi\u1ec3u th\u00eam th\u00f4ng tin, xin vui l\u00f2ng \u0111\u1ecdc ph\u1ea7n Ch\u00ednh s\u00e1ch &lt;a id='hgr-cookie_consent-cookie_policy_btn' class='link fs-14 fs-15-sm cursor-pointer' target='_blank' ref='someLink' rel='noopener noreferrer nofollow' href='\/chinh-sach-cookie'&gt;Cookies c\u1ee7a ch\u00fang t\u00f4i&lt;\/a&gt;.&quot;},&quot;acceptBtn&quot;:&quot;Ch\u1ea5p nh\u1eadn Cookies&quot;,&quot;settingsBtn&quot;:&quot;C\u1ea5u h\u00ecnh cookie&quot;},&quot;popup&quot;:{&quot;header&quot;:{&quot;title&quot;:&quot;Cookies settings&quot;,&quot;body&quot;:&quot;B\u1ea1n c\u00f3 th\u1ec3 ch\u1ea5p nh\u1eadn m\u1ecdi cookies ho\u1eb7c ch\u1ecdn t\u1eebng m\u1ee5c c\u1ee5 th\u1ec3, nh\u01b0 l\u00e0 th\u1ed1ng k\u00ea ho\u1eb7c marketing. Nh\u1eefng cookies b\u1eaft bu\u1ed9c s\u1ebd lu\u00f4n ch\u1ea1y v\u00ec ch\u00fang c\u1ea7n thi\u1ebft \u0111\u1ec3 v\u1eadn h\u00e0nh t\u00ednh n\u0103ng ch\u00ednh nh\u01b0 b\u1ea3o m\u1eadt, qu\u1ea3n l\u00fd m\u1ea1ng, v\u00e0 c\u1ea5p quy\u1ec1n truy c\u1eadp v\u00e0o trang c\u00e1 nh\u00e2n c\u1ee7a b\u1ea1n, d\u1ecbch v\u1ee5 b\u1ea1n thanh to\u00e1n, nh\u1eefng t\u00e0i nguy\u00ean ri\u00eang c\u1ee7a b\u1ea1n v\u00e0 c\u00e1c khu v\u1ef1c kh\u00e1c c\u1ee7a website. B\u1ea1n c\u00f3 th\u1ec3 v\u00f4 hi\u1ec7u nh\u1eefng cookies n\u00e0y b\u1eb1ng c\u00e1ch t\u00f9y ch\u1ec9nh tr\u00ecnh duy\u1ec7t, nh\u01b0ng n\u00f3 s\u1ebd \u1ea3nh h\u01b0\u1edfng \u0111\u1ebfn c\u00e1ch website ho\u1ea1t \u0111\u1ed9ng. \u0110\u1ec3 t\u00ecm hi\u1ec3u th\u00eam th\u00f4ng tin, h\u00e3y \u0111\u1ecdc &lt;a id='hgr-cookie_consent-settings-cookie_policy_btn' class='link fs-14' target='_blank' rel='noopener noreferrer nofollow' href='\/chinh-sach-cookie'&gt;Ch\u00ednh S\u00e1ch Cookie&lt;\/a&gt;.&quot;,&quot;btn&quot;:&quot;Ch\u1ea5p nh\u1eadn t\u1ea5t c\u1ea3&quot;},&quot;cookies&quot;:[{&quot;title&quot;:&quot;Cookies kh\u00f4ng th\u1ec3 thi\u1ebfu&quot;,&quot;body&quot;:&quot;Ch\u00fang d\u00f9ng \u0111\u1ec3 \u0111\u1ea3m b\u1ea3o website ho\u1ea1t \u0111\u1ed9ng \u0111\u01b0\u1ee3c.&quot;,&quot;btn&quot;:&quot;Lu\u00f4n k\u00edch ho\u1ea1t&quot;},{&quot;title&quot;:&quot;Cookie th\u1ed1ng k\u00ea&quot;,&quot;body&quot;:&quot;Ch\u00fang quan tr\u1ecdng \u0111\u1ed1i v\u1edbi ch\u00fang t\u00f4i v\u00ec n\u1eafm \u0111\u01b0\u1ee3c th\u00f4ng tin ch\u1ee9c n\u0103ng website v\u00e0 c\u1ea5u tr\u00fac website, d\u1ef1a tr\u00ean d\u1eef li\u1ec7u m\u00e0 website x\u1eed l\u00fd.&quot;,&quot;cookieName&quot;:&quot;statistics&quot;},{&quot;title&quot;:&quot;Cookie marketing&quot;,&quot;body&quot;:&quot;Ch\u00fang d\u00f9ng \u0111\u1ec3 thu th\u1eadp th\u00f4ng tin \u0111\u1ec3 qu\u1ea3ng c\u00e1o hay cung c\u1ea5p n\u1ed9i dung ph\u00f9 h\u1ee3p cho m\u1ed9t tr\u00ecnh duy\u1ec7t nh\u1ea5t \u0111\u1ecbnh b\u1eb1ng c\u00e1ch ph\u00e2n lo\u1ea1i c\u00e1c nh\u00f3m \u0111\u1ed1i t\u01b0\u1ee3ng.&quot;,&quot;cookieName&quot;:&quot;advertising&quot;}],&quot;buttonTxt&quot;:&quot;Ch\u1ea5p nh\u1eadn t\u1eebng ph\u1ea7n&quot;}}">
+</div>
+<div class="h-pt-3">
+  <div class="container">
+    <div class="row col-12 col-lg-9">
+      <div class="text-h-primary label position-relative top-3rem">
+      </div>
+    </div>
+  </div>
+</div> <div class="pt-30 pt-0-lg pb-40">
+  <div id="blog-post-container" class="w-100 flex-column d-flex flex-lg-row position-relative pt-20-lg">
+    <div id="post" class="d-flex flex-column flex-lg-row col-12 col-lg-9 col-xxl-7 offset-lg-1 offset-xxl-2 position-relative justify-content-center sidebar-left__wrapper">
+      <div class="stories-margin mt-150-lg sidebar-left">
+        <div class="widget-area row d-table mr-50-lg" style="height: 100%">
+        </div>
+      </div> <div class="post-content">
+      <div class="d-flex label text-content-grey mb-20 mb-sm-30 flex-wrap">
+        <div class="d-flex align-items-center h-mr-2 category">
+          <a class="category-name mr-5" href="https://www.hostinger.vn/huong-dan/thuat-ngu" id="category-name" data-wpel-link="internal">
+            Thuật ngữ </a>
+        </div>
+        <div class="d-flex align-items-center mr-sm-4 mr-1">
+          <p class="post-info">
+            Th3 23, 2020 </p>
+        </div>
+        <div class="d-flex align-items-center mr-sm-4 mr-1">
+          <p class="ml-2 post-info">
+            Hai G. </p>
+        </div>
+        <div class="d-flex align-items-center">
+          <p class="ml-2 post-info">5ít nhất Đọc </p>
+        </div>
+      </div>
+      <h1>React là gì? Và nó hoạt động như thế nào?</h1>
+      <div class="social-container d-flex d-xl-none">
+        <a class="social-link text-light-black cursor-pointer d-flex align-items-center justify-content-center">
+          <svg width="28" height="28" class="link" viewBox="0 0 28 14" onclick="copyToClipboard('www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao');linkClick(event)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.364 0.5C2.85 0.5 0 3.41 0 7C0 10.59 2.85 13.5 6.364 13.5H11.454V10.9H6.364C4.254 10.9 2.545 9.154 2.545 7C2.545 4.846 4.255 3.1 6.364 3.1H11.454V0.5H6.364V0.5ZM16.545 0.5V3.1H21.636C23.746 3.1 25.455 4.846 25.455 7C25.455 9.154 23.745 10.9 21.636 10.9H16.546V13.5H21.636C25.15 13.5 28 10.59 28 7C28 3.41 25.15 0.5 21.636 0.5H16.546H16.545ZM7.636 5.7V8.3H20.364V5.7H7.636Z" />
+          </svg>
+          <div id="copyLink" style="display: none;" class="copy-link">Copy link</div>
+          <div id="copiedLink" style="display: none;" class="copied-link">Được copy!</div>
+        </a>
+        <a href="https://twitter.com/intent/tweet?text=React là gì? Và nó hoạt động như thế nào?&amp;url=www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+          <svg width="28" height="28" class="twitter" viewBox="0 0 28 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28 3.222C26.97 3.685 25.862 3.996 24.7 4.137C25.9034 3.4078 26.801 2.26638 27.226 0.925C26.0996 1.60097 24.8652 2.07794 23.577 2.335C23.0427 1.75645 22.3944 1.29475 21.673 0.978948C20.9515 0.663145 20.1725 0.500076 19.385 0.5C16.212 0.5 13.641 3.1 13.641 6.306C13.641 6.761 13.693 7.206 13.789 7.629C9.016 7.387 4.784 5.075 1.95 1.56C1.43967 2.44841 1.17205 3.45545 1.174 4.48C1.17133 5.43314 1.40284 6.37235 1.84817 7.21507C2.2935 8.05778 2.93903 8.7782 3.728 9.313C2.81494 9.28354 1.92242 9.03451 1.126 8.587V8.66C1.126 11.474 3.106 13.82 5.734 14.353C4.8886 14.5858 4.00082 14.62 3.14 14.453C3.871 16.76 5.993 18.439 8.506 18.486C7.31857 19.431 5.95501 20.1305 4.49471 20.5435C3.0344 20.9566 1.50652 21.075 0 20.892C2.62075 22.596 5.68001 23.502 8.806 23.5C19.372 23.5 25.148 14.652 25.148 6.98C25.1481 6.72925 25.1428 6.47852 25.132 6.228C26.2588 5.40415 27.23 4.38627 28 3.222V3.222Z" />
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+          <svg width="28" height="28" class="facebook" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_3307_57195)">
+              <path d="M24.889 1.60787e-07H3.11C2.7015 1.39669e-07 2.29701 0.0804758 1.91962 0.23683C1.54224 0.393185 1.19935 0.622355 0.910544 0.911252C0.621741 1.20015 0.392681 1.54311 0.236448 1.92055C0.0802144 2.29799 -0.000131188 2.70251 1.60787e-07 3.111V24.89C1.39669e-07 25.2985 0.0804758 25.703 0.23683 26.0804C0.393185 26.4578 0.622355 26.8007 0.911252 27.0895C1.20015 27.3783 1.54311 27.6073 1.92055 27.7636C2.29799 27.9198 2.70251 28.0001 3.111 28H14.966V17.172H11.321V12.932H14.966V9.815C14.966 6.2 17.176 4.229 20.403 4.229C21.4898 4.22651 22.5759 4.28092 23.657 4.392V8.172H21.436C19.678 8.172 19.336 9.003 19.336 10.229V12.928H23.536L22.99 17.167H19.31V28H24.889C25.2976 28.0001 25.7022 27.9198 26.0797 27.7635C26.4572 27.6072 26.8002 27.378 27.0891 27.0891C27.378 26.8002 27.6072 26.4572 27.7635 26.0797C27.9198 25.7022 28.0001 25.2976 28 24.889V3.11C28 2.7015 27.9195 2.29701 27.7632 1.91962C27.6068 1.54224 27.3776 1.19935 27.0887 0.910544C26.7999 0.621741 26.4569 0.392681 26.0795 0.236448C25.702 0.0802144 25.2975 -0.000131188 24.889 1.60787e-07Z" />
+            </g>
+            <defs>
+              <clipPath id="clip0_3307_57195">
+                <rect width="28" height="28" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+          <svg width="28" height="28" class="linkedin h-p-0-lg h-mb-3-lg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_3302_57044)">
+              <path d="M24.889 1.60787e-07H3.11C2.7015 1.39669e-07 2.29701 0.0804758 1.91962 0.23683C1.54224 0.393185 1.19935 0.622355 0.910544 0.911252C0.621741 1.20015 0.392681 1.54311 0.236448 1.92055C0.0802144 2.29799 -0.000131188 2.70251 1.60787e-07 3.111V24.89C1.39669e-07 25.2985 0.0804758 25.703 0.23683 26.0804C0.393185 26.4578 0.622355 26.8007 0.911252 27.0895C1.20015 27.3783 1.54311 27.6073 1.92055 27.7636C2.29799 27.9198 2.70251 28.0001 3.111 28H24.89C25.2985 28 25.703 27.9195 26.0804 27.7632C26.4578 27.6068 26.8007 27.3776 27.0895 27.0887C27.3783 26.7999 27.6073 26.4569 27.7636 26.0795C27.9198 25.702 28.0001 25.2975 28 24.889V3.11C28 2.7015 27.9195 2.29701 27.7632 1.91962C27.6068 1.54224 27.3776 1.19935 27.0887 0.910544C26.7999 0.621741 26.4569 0.392681 26.0795 0.236448C25.702 0.0802144 25.2975 -0.000131188 24.889 1.60787e-07ZM9.333 21.778H5.41V10.888H9.334V21.778H9.333ZM7.302 8.893C6.102 8.893 5.302 8.093 5.302 7.026C5.302 5.959 6.1 5.16 7.433 5.16C8.633 5.16 9.433 5.96 9.433 7.026C9.433 8.094 8.633 8.893 7.301 8.893H7.302ZM23.333 21.778H19.535V15.826C19.535 14.18 18.522 13.801 18.142 13.801C17.762 13.801 16.497 14.054 16.497 15.826V21.778H12.572V10.888H16.497V12.408C17.002 11.522 18.015 10.888 19.914 10.888C21.814 10.888 23.334 12.408 23.334 15.826V21.778H23.333Z" />
+            </g>
+            <defs>
+              <clipPath id="clip0_3302_57044">
+                <rect width="28" height="28" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="mailto:?subject=React là gì? Và nó hoạt động như thế nào?&amp;body=Article:%20www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao" class="social-link" target="_blank" rel="nofollow noopener noreferrer">
+          <svg width="28" height="28" class="mail h-p-0-lg h-mb-3-lg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.8 3.00001C2.12163 2.99621 1.4654 3.24121 0.955496 3.68864C0.445591 4.13608 0.117389 4.7549 0.033 5.42801L14 14L27.967 5.42801C27.8826 4.7549 27.5544 4.13608 27.0445 3.68864C26.5346 3.24121 25.8784 2.99621 25.2 3.00001H2.8ZM0 8.15901V22.25C0 23.77 1.253 25 2.8 25H25.2C26.747 25 28 23.77 28 22.25V8.15901L14.741 16.296C14.5178 16.4323 14.2615 16.5043 14 16.5043C13.7385 16.5043 13.4822 16.4323 13.259 16.296L0 8.16001V8.15901Z" />
+          </svg>
+        </a>
+      </div>
+      <script type="rocketlazyloadscript">
+    function linkHover() {
+        var socialLinkHover = document.getElementById("copyLink");
+        if (socialLinkHover.style.display === "none") {
+            socialLinkHover.style.display = "inline-block";
+        } else {
+            socialLinkHover.style.display = "none";
+        }
+    }
+
+    function linkClick(e) {
+        var parent = e.target.parentElement;
+        var socialLinkClick = Array.from(parent.children).find(elem => elem.id == "copiedLink");
+        if (socialLinkClick.style.display === "none") {
+            socialLinkClick.style.display = "inline-block";
+            document.getElementById("copyLink").style.display = "none";
+        } else {
+            socialLinkClick.style.display = "none";
+        }
+        setTimeout(() => { socialLinkClick.style.display = "none" }, 2000);
+    }
+
+    function copyToClipboard(str) {
+        var el = document.createElement('textarea');
+        el.value = str;
+        el.setAttribute('readonly', '');
+        el.style = {
+            position: 'absolute',
+            left: '-9999px'
+        };
+
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
+</script> <div id="ez-toc-container" class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction">
+      <div class="ez-toc-title-container">
+        <p class="ez-toc-title">&nbsp;</p>
+        <span class="ez-toc-title-toggle"></span></div>
+      <nav><ul class='ez-toc-list ez-toc-list-level-1 '><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-1" href="#React_la_gi" title="React là gì?">React là gì?</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-2" href="#Tai_sao_su_dung_React" title="Tại sao sử dụng React?">Tại sao sử dụng React?</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-3" href="#React_hoat_dong_nhu_the_nao" title="React hoạt động như thế nào?">React hoạt động như thế nào?</a></li><li class='ez-toc-page-1 ez-toc-heading-level-2'><a class="ez-toc-link ez-toc-heading-4" href="#Loi_ket" title="Lời kết 
+">Lời kết
+      </a></li></ul></nav></div>
+      <h2><span class="ez-toc-section" id="React_la_gi"></span>React là gì?<span class="ez-toc-section-end"></span></h2>
+      <p><a href="https://reactjs.org/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>React</b></a> là thư viện <a href="https://www.hostinger.vn/huong-dan/javascript-la-gi/" data-wpel-link="internal"><b>JavaScript</b></a> phổ biến nhất để xây dựng giao diện người dùng (UI). Nó cho tốc độ phản hồi tuyệt vời khi user nhập liệu bằng cách sử dụng phương pháp mới để render trang web.</p>
+      <p>Components của công cụ này được phát triển bởi <a href="http://facebook.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>Facebook</b></a>. Nó được ra mắt như một công cụ JavaScript mã nguồn mở vào năm 2013. Hiện tại, nó đã đi trước các đối thủ chính như <a href="https://angular.io/docs" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>Angular</b></a> và <a href="https://getbootstrap.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>Bootstrap</b></a>, hai thư viện JavaScript bán chạy nhất thời bấy giờ.</p>
+      <p>Trong bài viết này, chúng tôi sẽ giúp bạn hiểu React là gì và lợi ích nó mang lại cho công việc như một nhà phát triển front-end.</p>
+      <h2><span class="ez-toc-section" id="Tai_sao_su_dung_React"></span><b>Tại sao sử dụng React?</b><span class="ez-toc-section-end"></span></h2>
+      <p>Giờ bạn đã biết react là gì, nhưng bạn có biết React được sử dụng bởi hàng trăm công ty lớn trên thế giới, bao gồm <a href="http://netflix.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>Netflix</b></a>, <a href="http://airbnb.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>Airbnb</b></a>, <a href="https://www.americanexpress.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>American Express</b></a>, <a href="http://facebook.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>Facebook</b></a>, <a href="https://www.whatsapp.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>WhatsApp</b></a>, <a href="http://ebay.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>eBay</b></a>, và <a href="http://instagram.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>Instagram</b></a>. Đây là bằng chứng cho thấy công cụ này có một số lợi thế không thể cạnh tranh  với các đối thủ khác.</p>
+      <p>Dưới đây là một số lý do để sử dụng nó:</p>
+      <h3><b>1. Dễ sử dụng</b></h3>
+      <p>React là một thư viện <a href="https://www.computerhope.com/jargon/g/gui.htm" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>GUI</b></a> nguồn mở JavaScript tập trung vào một điều cụ thể; hoàn thành nhiệm vụ UI hiệu quả. Nó được phân loại thành kiểu “V” trong mô hình <a href="https://www.youtube.com/watch?v=pCvZtjoRq1I" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>MVC</b></a> (Model-View-Controller).</p>
+      <p>Là lập trình viên JavaScript, bạn sẽ dễ dàng hiểu được những điều cơ bản về React. Bạn thậm chí có thể bắt đầu phát triển các ứng dụng dựa trên web bằng cách sử dụng react chỉ trong vài ngày.</p>
+      <p>Để củng cố hiểu biết của mình, bạn hãy thử khám phá thêm nhiều <a href="https://reactjs.org/tutorial/tutorial.html" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>hướng dẫn</b></a> về React. Chúng mang đến nhiều thông tin về cách sử dụng công cụ: videos, hướng dẫn và dữ liệu làm phong phú góc nhìn của bạn.</p>
+      <h3><b> 2. Nó hỗ trợ Reusable Component trong Java</b></h3>
+      <p>React cho phép bạn sử dụng lại components đã được phát triển thành các ứng dụng khác có cùng chức năng. Tính năng tái sử dụng component là một lợi thế khác biệt cho các lập trình viên.</p>
+      <h3><b> 3. Viết component dễ dàng hơn</b></h3>
+      <p>React component dễ viết hơn vì nó sử dụng <a href="https://www.fullstackreact.com/30-days-of-react/day-2/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>JSX</b></a>, mở rộng cú pháp tùy chọn cho JavaScript cho phép bạn kết hợp HTML với JavaScript.</p>
+      <p>JSX là một sự pha trộn tuyệt vời của JavaScript và <a href="https://www.hostinger.vn/huong-dan/html-cheat-sheet-co-html5-tags-moi/" data-wpel-link="internal"><b>HTML</b></a>. Nó làm rõ toàn bộ quá trình viết cấu trúc trang web. Ngoài ra, phần mở rộng cũng giúp render nhiều lựa chọn dễ dàng hơn.</p>
+      <p>JSX có thể không là phần mở rộng cú pháp phổ biến nhất, nhưng nó được chứng minh là hiệu quả trong việc phát triển components đặc biệt hoặc các ứng dụng có khối lượng lớn.</p>
+      <h3><b> 4. Hiệu suất tốt hơn với Virtual DOM</b></h3>
+      <p>React sẽ cập nhật hiệu quả quá trình <a href="https://css-tricks.com/dom/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer"><b>DOM</b></a> (Document Object Model &#8211; Mô hình đối tượng tài liệu). Như bạn có thể biết, quá trình này có thể gây ra nhiều thất vọng trong các dự án ứng dụng dựa trên web. May mắn là React sử dụng virtual DOMs, vì vậy bạn có thể tránh được vấn đề này.</p>
+      <p>Công cụ cho phép bạn xây dựng các virtual DOMs và host chúng trong bộ nhớ. Nhờ vậy, mỗi khi có sự thay đổi trong DOM thực tế, thì virtual sẽ thay đổi ngay lập tức.</p>
+      <p>Hệ thống này sẽ ngăn DOM thực tế để buộc các bản cập nhật được liên tục. Do đó, tốc độ của ứng dụng sẽ không bị gián đoạn.</p>
+      <h3><b> 5. Thân thiện với SEO</b></h3>
+      <p>React cho phép bạn tạo giao diện người dùng có thể được truy cập trên các công cụ tìm kiếm khác nhau. Tính năng này là một lợi thế rất lớn vì không phải tất cả các khung JavaScript đều thân thiện với <a href="https://www.hostinger.com/tutorials/what-is-seo/" data-wpel-link="exclude" target="_blank" rel="noopener noreferrer"><b>SEO</b></a>.</p>
+      <p>Ngoài ra, vì React có thể tăng tốc quá trình của ứng dụng nên có thể cải thiện kết quả SEO. Cuối cùng <a href="https://www.hostinger.com/blog/improve-seo-by-speeding-up-wordpress-site" data-wpel-link="exclude" target="_blank" rel="noopener noreferrer"><b>tốc độ web đóng một vai trò quan trọng trong tối ưu hóa SEO</b></a>.</p>
+      <p>Tuy nhiên, bạn cần lưu ý rằng React chỉ là một thư viện JavaScript. Nghĩa là nó không thể tự làm mọi thứ. Sử dụng các thư viện bổ sung có thể cần thiết cho các mục tiêu quản lý, định tuyến và tương tác.</p>
+      <h2><span class="ez-toc-section" id="React_hoat_dong_nhu_the_nao"></span><b>React hoạt động như thế nào?</b><span class="ez-toc-section-end"></span></h2>
+      <p>Bạn có thể ngạc nhiên khi biết bạn có thể viết <a href="https://www.hostinger.vn/huong-dan/lam-the-nao-de-them-javascript-trong-html/" data-wpel-link="internal"><b>codes HTML bằng JavaScript</b></a>. Đây chính xác là cách React hoạt động.</p>
+      <p>Tạo đại diện của nút DOM thông qua tạo hàm <b>Element</b> trong React. Đây là một ví dụ:</p>
+      <pre class="EnlighterJSRAW" data-enlighter-language="null">React.createElement("div", { className: "red" }, "Children Text");
+React.createElement(MyCounter, { count: 3 + 5 });</pre>
+      <p>Như bạn thấy, cú pháp trong HTML code ở trên rất giống với XML components. Tuy nhiên, thay vì sử dụng DOM class truyền thống, React sử dụng <b>className</b>.</p>
+      <p>Thẻ JSX có tên thẻ, con và thuộc tính. Dấu ngoặc kép trong các thuộc tính JSX đại diện cho chuỗi. Yếu tố này tương tự như JavaScript.</p>
+      <p>Ngoài ra, các giá trị số và biểu thức phải được viết bên trong dấu ngoặc nhọn.</p>
+      <p>Ví dụ trên minh họa rất rõ cú pháp trong React do công cụ sử dụng phần mở rộng JSX. Về cơ bản, nó là sự kết hợp giữa HTML và JavaScript.</p>
+      <p>Dưới đây là một ví dụ về React được viết bằng JSX:</p>
+      <pre class="EnlighterJSRAW" data-enlighter-language="null">&lt;div className="red"&gt;Children Text&lt;/div&gt;;
+&lt;MyCounter count={3 + 5} /&gt;;
+var GameScores = {player1: 2,player2: 5};
+&lt;DashboardUnit data-index="2"&gt;
+&lt;h1&gt;Scores&lt;/h1&gt;&lt;Scoreboard className="results" scores={GameScores} /&gt;
+&lt;/DashboardUnit&gt;;</pre>
+      <p>Để chia nhỏ, đây là một số lưu ý liên quan đến thẻ HTML ở trên:</p>
+      <ul>
+        <li>&lt;<b>MyCounter</b>&gt; được gọi là Số đếm, hiển thị biểu thức số là giá trị của nó.</li>
+        <li><b>GameScores</b> là một đối tượng theo nghĩa đen có hai cặp giá trị prop.</li>
+        <li>&lt;<b>DashboardUnit</b>&gt; là khối <b>XML</b> được render trên trang.</li>
+        <li><b>scores={GameScores}</b>}: thuộc tính điểm nhận được giá trị từ GameScores, đã được xác định trước đó.</li>
+      </ul>
+      <p>Hầu hết các phần của React được viết bằng cách sử dụng JSX (JavaScript XML) chứ không phải JavaScript tiêu chuẩn (JS). Tuy nhiên, bạn cần lưu ý rằng mục đích duy nhất của việc này là làm cho React components dễ tạo hơn.</p>
+      <p>Bạn có thể tạo React components với JavaScript tiêu chuẩn, nhưng chúng tôi đảm bảo nó sẽ cực kì lộn xộn.</p>
+      <p>Hơn nữa, ý tưởng đằng sau việc sử dụng JSX trong React là Facebook (với tư cách là nhà phát triển ban đầu) muốn cung cấp một loại tiện ích mở rộng có cú pháp cụ thể với cấu hình rõ ràng cho các nhà phát triển.</p>
+      <h2><span class="ez-toc-section" id="Loi_ket"></span><b>Lời kết<br />
+      </b><span class="ez-toc-section-end"></span></h2>
+      <p>Cuối cùng, chúng tôi hy vọng rằng bài viết này có thể cung cấp một số góc nhìn về react là gì và cách hoạt động thực sự của nó. Để kết luận tất cả, đây là một số lưu ý quan trọng liên quan đến chủ đề:</p>
+      <ol>
+        <li>React ban đầu được giới thiệu bởi Facebook.</li>
+        <li>Nó được sử dụng bởi rất nhiều nhãn hiệu và công ty lớn trên thế giới.</li>
+        <li>React phục vụ như một thư viện JavaScript. Tuy nhiên, nó cũng có thể được phân loại thành một khung.</li>
+        <li>Khung này không thể hoạt động một mình, bạn sẽ cần các yếu tố bổ sung cho các mục đích khác nhau như định tuyến, quản lý, v.v.</li>
+        <li>React sử dụng virtual DOM để tối ưu hóa trang tốt hơn</li>
+        <li>Khung này dễ sử dụng và thân thiện với SEO.</li>
+        <li>Hỗ trợ tái sử dụng components.</li>
+        <li>Sử dụng tiện ích mở rộng JSX, về cơ bản là sự kết hợp tuyệt vời giữa HTML và JavaScript.</li>
+        <li>React sử dụng JSX chỉ để viết dễ dàng hơn, không phải vì nó hoạt động tốt hơn.</li>
+      </ol>
+      <p>Giờ bạn đã biết react là gì, nó hoạt động như thế nào. Nếu bạn muốn cùng thảo luận về React, đừng ngại hãy để lại bình luận bên dưới nhé.</p>
+      <div id="the-author-section" class="col-12 bg-ghost-white">
+        <div class="d-flex flex-column flex-sm-row ml-0 justify-content-center justify-content-sm-start">
+          <div class="author-avatar">
+            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" class="border-radius-50" alt="Author" data-lazy-src="https://secure.gravatar.com/avatar/85bf757373952effc77e0ea8caaf0a14?s=96&d=mm&r=g" /><noscript><img src="https://secure.gravatar.com/avatar/85bf757373952effc77e0ea8caaf0a14?s=96&d=mm&r=g"
+                                                                                                                                                                                                                                                                                      class="border-radius-50"
+                                                                                                                                                                                                                                                                                      alt="Author"/></noscript>
+          </div>
+          <div class="author-info align-items-sm-start pl-20-sm">
+            <span class="author">Tác giả</span>
+            <p class="author-name">Hai G.</p>
+          </div>
+        </div>
+        <div class="description mt-15 mt-30-md">
+          <p class="text-center text-sm-left">
+            Hải G. là chuyên gia quản lý, vận hành các dịch vụ website. Anh có nhiều năm kinh nghiệm về VPS, Hosting, technical SEO, CMS. Đặc biệt yêu thích WordPress và đã dùng nó hơn 5 năm nay. Sở thích của anh là đọc, viết blog, đi du lịch và tư vấn cho các bạn trẻ khởi nghiệp. </p>
+        </div>
+        <div class="more-from-author">
+          <a class="links-hover mt-5" href="https://www.hostinger.vn/huong-dan/author/hghaigiang" data-wpel-link="internal">
+            Nhiều hơn bởi Hai G. </a>
+        </div>
+      </div>
+    </div>
+      <div class="social-container position-sticky d-none d-xl-block">
+        <a class="social-link text-light-black cursor-pointer d-flex align-items-center justify-content-center">
+          <svg width="28" height="28" class="link" viewBox="0 0 28 14" onclick="copyToClipboard('www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao');linkClick(event)" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.364 0.5C2.85 0.5 0 3.41 0 7C0 10.59 2.85 13.5 6.364 13.5H11.454V10.9H6.364C4.254 10.9 2.545 9.154 2.545 7C2.545 4.846 4.255 3.1 6.364 3.1H11.454V0.5H6.364V0.5ZM16.545 0.5V3.1H21.636C23.746 3.1 25.455 4.846 25.455 7C25.455 9.154 23.745 10.9 21.636 10.9H16.546V13.5H21.636C25.15 13.5 28 10.59 28 7C28 3.41 25.15 0.5 21.636 0.5H16.546H16.545ZM7.636 5.7V8.3H20.364V5.7H7.636Z" />
+          </svg>
+          <div id="copyLink" style="display: none;" class="copy-link">Copy link</div>
+          <div id="copiedLink" style="display: none;" class="copied-link">Được copy!</div>
+        </a>
+        <a href="https://twitter.com/intent/tweet?text=React là gì? Và nó hoạt động như thế nào?&amp;url=www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+          <svg width="28" height="28" class="twitter" viewBox="0 0 28 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28 3.222C26.97 3.685 25.862 3.996 24.7 4.137C25.9034 3.4078 26.801 2.26638 27.226 0.925C26.0996 1.60097 24.8652 2.07794 23.577 2.335C23.0427 1.75645 22.3944 1.29475 21.673 0.978948C20.9515 0.663145 20.1725 0.500076 19.385 0.5C16.212 0.5 13.641 3.1 13.641 6.306C13.641 6.761 13.693 7.206 13.789 7.629C9.016 7.387 4.784 5.075 1.95 1.56C1.43967 2.44841 1.17205 3.45545 1.174 4.48C1.17133 5.43314 1.40284 6.37235 1.84817 7.21507C2.2935 8.05778 2.93903 8.7782 3.728 9.313C2.81494 9.28354 1.92242 9.03451 1.126 8.587V8.66C1.126 11.474 3.106 13.82 5.734 14.353C4.8886 14.5858 4.00082 14.62 3.14 14.453C3.871 16.76 5.993 18.439 8.506 18.486C7.31857 19.431 5.95501 20.1305 4.49471 20.5435C3.0344 20.9566 1.50652 21.075 0 20.892C2.62075 22.596 5.68001 23.502 8.806 23.5C19.372 23.5 25.148 14.652 25.148 6.98C25.1481 6.72925 25.1428 6.47852 25.132 6.228C26.2588 5.40415 27.23 4.38627 28 3.222V3.222Z" />
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+          <svg width="28" height="28" class="facebook" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_3307_57195)">
+              <path d="M24.889 1.60787e-07H3.11C2.7015 1.39669e-07 2.29701 0.0804758 1.91962 0.23683C1.54224 0.393185 1.19935 0.622355 0.910544 0.911252C0.621741 1.20015 0.392681 1.54311 0.236448 1.92055C0.0802144 2.29799 -0.000131188 2.70251 1.60787e-07 3.111V24.89C1.39669e-07 25.2985 0.0804758 25.703 0.23683 26.0804C0.393185 26.4578 0.622355 26.8007 0.911252 27.0895C1.20015 27.3783 1.54311 27.6073 1.92055 27.7636C2.29799 27.9198 2.70251 28.0001 3.111 28H14.966V17.172H11.321V12.932H14.966V9.815C14.966 6.2 17.176 4.229 20.403 4.229C21.4898 4.22651 22.5759 4.28092 23.657 4.392V8.172H21.436C19.678 8.172 19.336 9.003 19.336 10.229V12.928H23.536L22.99 17.167H19.31V28H24.889C25.2976 28.0001 25.7022 27.9198 26.0797 27.7635C26.4572 27.6072 26.8002 27.378 27.0891 27.0891C27.378 26.8002 27.6072 26.4572 27.7635 26.0797C27.9198 25.7022 28.0001 25.2976 28 24.889V3.11C28 2.7015 27.9195 2.29701 27.7632 1.91962C27.6068 1.54224 27.3776 1.19935 27.0887 0.910544C26.7999 0.621741 26.4569 0.392681 26.0795 0.236448C25.702 0.0802144 25.2975 -0.000131188 24.889 1.60787e-07Z" />
+            </g>
+            <defs>
+              <clipPath id="clip0_3307_57195">
+                <rect width="28" height="28" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao" class="social-link" target="_blank" rel="nofollow noopener noreferrer" data-wpel-link="exclude">
+          <svg width="28" height="28" class="linkedin h-p-0-lg h-mb-3-lg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_3302_57044)">
+              <path d="M24.889 1.60787e-07H3.11C2.7015 1.39669e-07 2.29701 0.0804758 1.91962 0.23683C1.54224 0.393185 1.19935 0.622355 0.910544 0.911252C0.621741 1.20015 0.392681 1.54311 0.236448 1.92055C0.0802144 2.29799 -0.000131188 2.70251 1.60787e-07 3.111V24.89C1.39669e-07 25.2985 0.0804758 25.703 0.23683 26.0804C0.393185 26.4578 0.622355 26.8007 0.911252 27.0895C1.20015 27.3783 1.54311 27.6073 1.92055 27.7636C2.29799 27.9198 2.70251 28.0001 3.111 28H24.89C25.2985 28 25.703 27.9195 26.0804 27.7632C26.4578 27.6068 26.8007 27.3776 27.0895 27.0887C27.3783 26.7999 27.6073 26.4569 27.7636 26.0795C27.9198 25.702 28.0001 25.2975 28 24.889V3.11C28 2.7015 27.9195 2.29701 27.7632 1.91962C27.6068 1.54224 27.3776 1.19935 27.0887 0.910544C26.7999 0.621741 26.4569 0.392681 26.0795 0.236448C25.702 0.0802144 25.2975 -0.000131188 24.889 1.60787e-07ZM9.333 21.778H5.41V10.888H9.334V21.778H9.333ZM7.302 8.893C6.102 8.893 5.302 8.093 5.302 7.026C5.302 5.959 6.1 5.16 7.433 5.16C8.633 5.16 9.433 5.96 9.433 7.026C9.433 8.094 8.633 8.893 7.301 8.893H7.302ZM23.333 21.778H19.535V15.826C19.535 14.18 18.522 13.801 18.142 13.801C17.762 13.801 16.497 14.054 16.497 15.826V21.778H12.572V10.888H16.497V12.408C17.002 11.522 18.015 10.888 19.914 10.888C21.814 10.888 23.334 12.408 23.334 15.826V21.778H23.333Z" />
+            </g>
+            <defs>
+              <clipPath id="clip0_3302_57044">
+                <rect width="28" height="28" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="mailto:?subject=React là gì? Và nó hoạt động như thế nào?&amp;body=Article:%20www.hostinger.vn/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao" class="social-link" target="_blank" rel="nofollow noopener noreferrer">
+          <svg width="28" height="28" class="mail h-p-0-lg h-mb-3-lg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.8 3.00001C2.12163 2.99621 1.4654 3.24121 0.955496 3.68864C0.445591 4.13608 0.117389 4.7549 0.033 5.42801L14 14L27.967 5.42801C27.8826 4.7549 27.5544 4.13608 27.0445 3.68864C26.5346 3.24121 25.8784 2.99621 25.2 3.00001H2.8ZM0 8.15901V22.25C0 23.77 1.253 25 2.8 25H25.2C26.747 25 28 23.77 28 22.25V8.15901L14.741 16.296C14.5178 16.4323 14.2615 16.5043 14 16.5043C13.7385 16.5043 13.4822 16.4323 13.259 16.296L0 8.16001V8.15901Z" />
+          </svg>
+        </a>
+      </div>
+      <script type="rocketlazyloadscript">
+    function linkHover() {
+        var socialLinkHover = document.getElementById("copyLink");
+        if (socialLinkHover.style.display === "none") {
+            socialLinkHover.style.display = "inline-block";
+        } else {
+            socialLinkHover.style.display = "none";
+        }
+    }
+
+    function linkClick(e) {
+        var parent = e.target.parentElement;
+        var socialLinkClick = Array.from(parent.children).find(elem => elem.id == "copiedLink");
+        if (socialLinkClick.style.display === "none") {
+            socialLinkClick.style.display = "inline-block";
+            document.getElementById("copyLink").style.display = "none";
+        } else {
+            socialLinkClick.style.display = "none";
+        }
+        setTimeout(() => { socialLinkClick.style.display = "none" }, 2000);
+    }
+
+    function copyToClipboard(str) {
+        var el = document.createElement('textarea');
+        el.value = str;
+        el.setAttribute('readonly', '');
+        el.style = {
+            position: 'absolute',
+            left: '-9999px'
+        };
+
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
+</script> </div>
+  </div>
+</div>
+<div class="related-tutorials-section">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center h-mb-5">
+      <h2 class="pb-30">
+        Bài hướng dẫn liên quan </h2>
+    </div>
+    <div class="row">
+      <div class="content-item d-flex flex-column col-md-4 h-mb-2" id="post-11862">
+        <div class="col-12 h-p-0 height-20rem d-contents">
+          <a class="height-inherit" href="https://www.hostinger.vn/huong-dan/ipv4-va-ipv6" data-wpel-link="internal">
+            <img width="640" height="281" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20281'%3E%3C/svg%3E" class="object-fit-cover border-radius-10px wp-post-image" alt="IPv4 và IPv6 &#8211; So sánh hai giao thức mạng trên Internet" decoding="async" data-lazy-srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2022/06/ipv4-va-ipv6.webp 1024w,https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2022/06/ipv4-va-ipv6-300x132.webp 300w,https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2022/06/ipv4-va-ipv6-150x66.webp 150w,https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2022/06/ipv4-va-ipv6-768x338.webp 768w" data-lazy-sizes="(max-width: 640px) 100vw, 640px" data-lazy-src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2022/06/ipv4-va-ipv6.webp" /><noscript><img width="640" height="281" src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2022/06/ipv4-va-ipv6.webp" class="object-fit-cover border-radius-10px wp-post-image" alt="IPv4 và IPv6 &#8211; So sánh hai giao thức mạng trên Internet" decoding="async" srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2022/06/ipv4-va-ipv6.webp 1024w,https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2022/06/ipv4-va-ipv6-300x132.webp 300w,https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2022/06/ipv4-va-ipv6-150x66.webp 150w,https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2022/06/ipv4-va-ipv6-768x338.webp 768w" sizes="(max-width: 640px) 100vw, 640px" /></noscript> </a>
+        </div>
+        <div class="d-flex flex-column h-pt-2 h-pb-3">
+          <div class="d-flex justify-content-sm-between justify-content-center h-mb-1">
+            <p class="label text-h-meteorite-dark fw-800 fs-14 related-posts__date-category">
+              20 Th6 •
+              <a class="text-h-meteorite-dark text-uppercase fw-800 fs-14 links-hover" href="https://www.hostinger.vn/huong-dan/thuat-ngu" data-wpel-link="internal">
+                Thuật ngữ </a>
+              <span class="related-posts__separator">•</span>
+            </p>
+          </div>
+          <h5 class="text-center text-sm-left pb-10">
+            <a href="https://www.hostinger.vn/huong-dan/ipv4-va-ipv6" data-wpel-link="internal">
+              IPv4 và IPv6 &#8211; So sánh hai giao thức mạng trên Internet </a>
+          </h5>
+          <p class="text-content-grey text-center text-sm-left">
+            Máy tính và các thiết bị có thể giao tiếp qua internet là nhờ Giao thức Internet &#8211; Internet Protocol (IP). Hiện tại, có... </p>
+          <div class="d-flex justify-content-center justify-content-sm-start">
+            <a class="subtitle  font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.vn/huong-dan/author/huydo">
+              <p class="author-name text-center text-sm-left">
+                Bởi Huy Do. </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="content-item d-flex flex-column col-md-4 h-mb-2" id="post-11721">
+        <div class="col-12 h-p-0 height-20rem d-contents">
+          <a class="height-inherit" href="https://www.hostinger.vn/huong-dan/shared-hosting-hay-vps-hosting" data-wpel-link="internal">
+            <img width="730" height="319" class="width-100p object-fit-cover border-radius-10px" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20730%20319'%3E%3C/svg%3E" data-lazy-src="https://www.hostinger.vn/huong-dan/wp-content/themes/tutorialsthemeuplift/public/images/no_image.jpg" /><noscript><img width="730" height="319" class="width-100p object-fit-cover border-radius-10px" src="https://www.hostinger.vn/huong-dan/wp-content/themes/tutorialsthemeuplift/public/images/no_image.jpg"/></noscript>
+          </a>
+        </div>
+        <div class="d-flex flex-column h-pt-2 h-pb-3">
+          <div class="d-flex justify-content-sm-between justify-content-center h-mb-1">
+            <p class="label text-h-meteorite-dark fw-800 fs-14 related-posts__date-category">
+              18 Th8 •
+              <a class="text-h-meteorite-dark text-uppercase fw-800 fs-14 links-hover" href="https://www.hostinger.vn/huong-dan/thuat-ngu" data-wpel-link="internal">
+                Thuật ngữ </a>
+              <span class="related-posts__separator">•</span>
+            </p>
+          </div>
+          <h5 class="text-center text-sm-left pb-10">
+            <a href="https://www.hostinger.vn/huong-dan/shared-hosting-hay-vps-hosting" data-wpel-link="internal">
+              Shared Hosting hay VPS Hosting: Lựa chọn nào dành cho bạn? </a>
+          </h5>
+          <p class="text-content-grey text-center text-sm-left">
+            Bạn đang khởi tạo một trang web và cần tìm một nhà cung cấp dịch vụ hosting có thể cung cấp cho bạn máy chủ lưu... </p>
+          <div class="d-flex justify-content-center justify-content-sm-start">
+            <a class="subtitle  font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.vn/huong-dan/author/huydo">
+              <p class="author-name text-center text-sm-left">
+                Bởi Huy Do. </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="content-item d-flex flex-column col-md-4 h-mb-2" id="post-11420">
+        <div class="col-12 h-p-0 height-20rem d-contents">
+          <a class="height-inherit" href="https://www.hostinger.vn/huong-dan/su-khac-nhau-giua-domain-va-hosting" data-wpel-link="internal">
+            <img width="640" height="278" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20278'%3E%3C/svg%3E" class="object-fit-cover border-radius-10px wp-post-image" alt="Sự Khác Nhau Giữa Domain và Hosting Là Gì?" decoding="async" data-lazy-srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2021/03/su-khac-nhau-giua-domain-va-hosting.jpg 920w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2021/03/su-khac-nhau-giua-domain-va-hosting-300x130.jpg 300w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2021/03/su-khac-nhau-giua-domain-va-hosting-150x65.jpg 150w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2021/03/su-khac-nhau-giua-domain-va-hosting-768x334.jpg 768w" data-lazy-sizes="(max-width: 640px) 100vw, 640px" data-lazy-src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2021/03/su-khac-nhau-giua-domain-va-hosting.jpg" /><noscript><img width="640" height="278" src="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2021/03/su-khac-nhau-giua-domain-va-hosting.jpg" class="object-fit-cover border-radius-10px wp-post-image" alt="Sự Khác Nhau Giữa Domain và Hosting Là Gì?" decoding="async" loading="lazy" srcset="https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2021/03/su-khac-nhau-giua-domain-va-hosting.jpg 920w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2021/03/su-khac-nhau-giua-domain-va-hosting-300x130.jpg 300w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2021/03/su-khac-nhau-giua-domain-va-hosting-150x65.jpg 150w, https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2021/03/su-khac-nhau-giua-domain-va-hosting-768x334.jpg 768w" sizes="(max-width: 640px) 100vw, 640px" /></noscript> </a>
+        </div>
+        <div class="d-flex flex-column h-pt-2 h-pb-3">
+          <div class="d-flex justify-content-sm-between justify-content-center h-mb-1">
+            <p class="label text-h-meteorite-dark fw-800 fs-14 related-posts__date-category">
+              23 Th3 •
+              <a class="text-h-meteorite-dark text-uppercase fw-800 fs-14 links-hover" href="https://www.hostinger.vn/huong-dan/thuat-ngu" data-wpel-link="internal">
+                Thuật ngữ </a>
+              <span class="related-posts__separator">•</span>
+            </p>
+          </div>
+          <h5 class="text-center text-sm-left pb-10">
+            <a href="https://www.hostinger.vn/huong-dan/su-khac-nhau-giua-domain-va-hosting" data-wpel-link="internal">
+              Sự Khác Nhau Giữa Domain và Hosting Là Gì? </a>
+          </h5>
+          <p class="text-content-grey text-center text-sm-left">
+            Về cơ bản, sự khác biệt giữa domain và hosting là: tên miền đóng vai trò là địa chỉ của trang web, trong khi dịch vụ... </p>
+          <div class="d-flex justify-content-center justify-content-sm-start">
+            <a class="subtitle  font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.vn/huong-dan/author/huydo">
+              <p class="author-name text-center text-sm-left">
+                Bởi Huy Do. </p>
+            </a>
+          </div>
+        </div>
+      </div> </div>
+  </div>
+</div>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" src="https://www.hostinger.vn/huong-dan/wp-content/cache/min/10/bootstrap/v5/tp.widget.bootstrap.min.js?ver=1661962995" async></script>
+<div class="pb-80 pb-120-lg">
+  <h2 class="text-center mb-40 mt-50">Những gì khách hàng của chúng tôi nói</h2>
+  <div class="container">
+    <div class="trustpilot-widget" data-locale="en" data-template-id="53aa8912dec7e10d38f59f36" data-review-languages="en" data-businessunit-id="580cbf960000ff0005966f44" data-stars="4,5" data-style-height="140px" data-style-width="100%" data-theme="light">
+      <a href="https://www.trustpilot.com/review/hostinger.com" target="_blank" rel="noopener noreferrer" data-wpel-link="exclude">Trustpilot</a>
+    </div>
+  </div>
+</div>
+<div class="container justify-content-center">
+  <div id="comment-form" class="bg-white h-pt-7-lg h-pt-2 h-pb-7-lg h-mt-2 w-100">
+    <div class="d-flex flex-column">
+      <div id="respond" class="comment-respond">
+        <h3 class="text-h-meteorite-dark fw-800 fs-44 mb-5">Trả lời <small><a rel="nofollow" id="cancel-comment-reply-link" href="/huong-dan/react-la-gi-va-no-hoat-dong-nhu-the-nao#respond" style="display:none;" data-wpel-link="internal">Hủy</a></small></h3><div id="comment-error" class="error-message d-none fs-14 fs-18-sm fs-20-xl pl-15 pl-20-sm pr-15 pr-20-sm"><img width="32" height="32" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3C/svg%3E" data-lazy-src="https://www.hostinger.vn/huong-dan/wp-content/themes/tutorialsthemeuplift/public/images/icons/alert.svg" /><noscript><img width="32" height="32" src="https://www.hostinger.vn/huong-dan/wp-content/themes/tutorialsthemeuplift/public/images/icons/alert.svg"/></noscript><span id="required-fields" class="d-none">Điền vào thông tin cần thiết.</span><span id="required-checkbox" class="d-none">Xin vui lòng chấp nhận điều khoản riêng tư.</span><span id="required-form" class="d-none">Xin vui lòng điền vào thông tin cần thiết và chấp nhận ô đồng ý về quyền riêng tư.</span></div><form action="https://www.hostinger.vn/huong-dan/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><div id="comment-texarea-input-border" class="new-input-border position-relative mt-20 mt-30-sm"><textarea id="comment" name="comment" placeholder="Bình luận*" style="outline: 0; height: 200px !important;" class="w-100 dark border-0 noresize bg-transparent h-pl-2 h-pt-2 label text-content-grey" style="height: 200px !important;"></textarea></div><p class="mb-20"></p><div id="comment-name-input-border" class="new-input-border position-relative"><input id="comment-name-input" style="outline: 0;" class="dark height-46px bg-transparent border-0 w-100 h-pl-2 label text-content-grey" id="author" name="author" type="text" placeholder="Tên*" value="" aria-required='true'></div>
+        <p class="mb-20"></p><div id="comment-email-input-border" class="new-input-border position-relative"><input id="comment-email-input" style="outline: 0;" class="dark height-46px border-0 bg-transparent w-100 h-pl-2 label text-content-grey" id="email" name="email" placeholder="Email*" type="email" value="" aria-required='true'></div>
+        <p class="comment-form-cookies-consent mt-20 fs-14 d-flex align-items-center"><input id="wp-comment-cookies-consent" class="mr-5 mb-2" name="wp-comment-cookies-consent" type="checkbox" value="yes" /><label for="wp-comment-cookies-consent">Bằng cách sử dụng biểu mẫu này, bạn đồng ý rằng dữ liệu cá nhân của bạn sẽ được xử lý theo <a href="/rieng-tu " target="_blank" data-wpel-link="internal">Chính sách bảo mật</a> của chúng tôi.</label></p>
+        <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit-comment new-h-button-primary button text-white mt-40 float-right w-100 w-30-sm" value="Gửi" /> <input type='hidden' name='comment_post_ID' value='10099' id='comment_post_ID' />
+          <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+        </p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="8f183ad9bc" /></p><p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="164" /><script type="rocketlazyloadscript">document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form> </div>
+      <p class="akismet_comment_form_privacy_notice">Website này sử dụng Akismet để hạn chế spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener external noreferrer" data-wpel-link="external">Tìm hiểu bình luận của bạn được duyệt như thế nào</a>.</p> <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+              var label = document.querySelector("[for='wpgdprc'");
+              var warning = document.getElementsByClassName("akismet_comment_form_privacy_notice");
+              if(label && warning && warning.length > 0) {
+                  label.innerText += " " + warning[0].innerText;
+                  warning[0].innerText = "";
+              }
+
+
+              document.getElementById("submit").addEventListener("click", function displayDate(event) {
+                  var textFieldContainer = document.getElementById("comment-texarea-input-border");
+                  var textField = document.getElementById("comment");
+                  var emailFieldContainer = document.getElementById("comment-email-input-border");
+                  var emailField = document.getElementById("comment-email-input");
+                  var nameFieldContainer = document.getElementById("comment-name-input-border");
+                  var nameField = document.getElementById("comment-name-input");
+                  var checkbox = document.getElementById("wp-comment-cookies-consent");
+                  var errorMessage = document.getElementById("comment-error");
+                  var errorExists = false;
+
+                  textFieldContainer.classList.remove("error");
+                  nameFieldContainer.classList.remove("error");
+                  emailFieldContainer.classList.remove("error");
+                  if(checkbox) checkbox.classList.remove("error");
+                  document.getElementById("required-fields").classList.add("d-none");
+                  document.getElementById("required-checkbox").classList.add("d-none");
+                  document.getElementById("required-form").classList.add("d-none");
+                  errorMessage.classList.add("d-none");
+
+                  if(textField && !textField.value) {
+                      textFieldContainer.classList.add("error");
+                      document.getElementById("required-fields").classList.remove("d-none");
+                      errorExists = true;
+                  }
+                  if(nameField && !nameField.value) {
+                      nameFieldContainer.classList.add("error");
+                      document.getElementById("required-fields").classList.remove("d-none");
+                      errorExists = true;
+                  }
+                  if(emailField && (!emailField.value || !emailField.value.includes('@'))) {
+                      emailFieldContainer.classList.add("error");
+                      document.getElementById("required-fields").classList.remove("d-none");
+                      errorExists = true;
+                  }
+                  if(checkbox && !checkbox.checked) {
+                      checkbox.classList.add("error");
+                      if(errorExists) {
+                          document.getElementById("required-fields").classList.add("d-none");
+                          document.getElementById("required-form").classList.remove("d-none");
+                      }
+                      else {
+                          document.getElementById("required-checkbox").classList.remove("d-none");
+                      }
+                      errorExists = true;
+                  }
+                  if(errorExists) {
+                      event.preventDefault();
+                      errorMessage.classList.remove("d-none");
+                  }
+              });
+
+              var commentForm = document.getElementById('commentform');
+
+              commentForm.addEventListener('submit', function (event) {
+                  event.preventDefault();
+
+                  var submitUrl = commentForm.getAttribute('action');
+
+                  var textField = document.getElementById('comment');
+                  var emailField = document.getElementById('comment-email-input');
+                  var nameField = document.getElementById('comment-name-input');
+                  var checkbox = document.getElementById('wp-comment-cookies-consent');
+                  var commentPostId = 10099;
+                  var commentParentField = document.getElementById('comment_parent');
+                  var commentParentId = commentParentField ? commentParentField.value : 0;
+                  var akismetCommentNonceField = document.getElementById('akismet_comment_nonce');
+                  var akismetCommentNonce = akismetCommentNonceField ? akismetCommentNonceField.value : '';
+                  var akJsField = document.getElementById('ak_js');
+                  var akJsFieldValue = akJsField ? akJsField.value : '';
+
+                  var commentFormData = [];
+
+                  if (textField && textField.value) {
+                      commentFormData.push('comment=' + encodeURIComponent(textField.value));
+                  }
+
+                  if (nameField && nameField.value) {
+                      commentFormData.push('author=' + encodeURIComponent(nameField.value));
+                  }
+
+                  if (emailField && emailField.value) {
+                      commentFormData.push('email=' + encodeURIComponent(emailField.value));
+                  }
+
+                  if (checkbox && checkbox.checked) {
+                      commentFormData.push('wp-comment-cookies-consent=yes');
+                  }
+
+                  commentFormData.push('comment_post_ID=' + commentPostId);
+                  commentFormData.push('comment_parent=' + commentParentId);
+                  commentFormData.push('akismet_comment_nonce=' + akismetCommentNonce);
+                  commentFormData.push('ak_js=' + akJsFieldValue);
+
+                  var encodedFormData = commentFormData.join('&').replace(/%20/g, '+');
+
+                  var httpClient = new XMLHttpRequest();
+
+                  httpClient.onreadystatechange = function () {
+                      if(httpClient.readyState === 4 && httpClient.status === 200) {
+                          var replyNoticeText = document.getElementById('comment-post-notice');
+
+                          replyNoticeText.classList.remove('d-none');
+                          replyNoticeText.classList.add('d-flex');
+
+                          if (textField) {
+                              textField.value = '';
+                          }
+
+                          if (nameField && nameField.value) {
+                              nameField.value = '';
+                          }
+
+                          if (emailField && emailField.value) {
+                              emailField.value = '';
+                          }
+                      }
+                  };
+
+                  httpClient.open('POST', submitUrl, true);
+                  httpClient.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                  httpClient.send(encodedFormData);
+              });
+          </script>
+    </div>
+    <div id="comment-post-notice" class="d-none bg-light w-100 mt-30 p-20">
+      <span class="d-block icon-info w-26-px h-20"></span>
+      <span class="color-primary font-14 line-height-20 ml-10 ">Thank you! Your comment has been successfully submitted. It will be approved within the next 24 hours.</span>
+    </div>
+  </div>
+</div>
+</div>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+      
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'tutorialsCategory': "Thuật ngữ"
+      });
+
+      window.optinMonsterCategory = "Thuật ngữ";
+  </script>
+<footer id="footer">
+  <div id="footer-new" class="footer-new">
+    <Footer-new :menu-items="{&quot;hosting&quot;:{&quot;category&quot;:&quot;Hosting&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;\/web-hosting&quot;,&quot;title&quot;:&quot;Web Hosting&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:1},{&quot;pattern&quot;:&quot;\/vps&quot;,&quot;title&quot;:&quot;Thu\u00ea VPS&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:3},{&quot;pattern&quot;:&quot;\/minecraft-server-hosting&quot;,&quot;title&quot;:&quot;Minecraft Server Hosting&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:4},{&quot;pattern&quot;:&quot;\/cyberpanel-vps-hosting&quot;,&quot;title&quot;:&quot;CyberPanel VPS Hosting&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:4},{&quot;pattern&quot;:&quot;\/cloud-hosting&quot;,&quot;title&quot;:&quot;Cloud Hosting&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:5},{&quot;pattern&quot;:&quot;\/wordpress-hosting&quot;,&quot;title&quot;:&quot;WordPress Hosting&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:6},{&quot;pattern&quot;:&quot;\/email-doanh-nghiep&quot;,&quot;title&quot;:&quot;Email Doanh Nghi\u1ec7p&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:7},{&quot;pattern&quot;:&quot;\/cms-website&quot;,&quot;title&quot;:&quot;CMS Website&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:8},{&quot;pattern&quot;:&quot;\/hosting-thuong-mai-dien-tu&quot;,&quot;title&quot;:&quot;Ecommerce Hosting&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:9},{&quot;pattern&quot;:&quot;\/free-hosting&quot;,&quot;title&quot;:&quot;Free Hosting&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:11},{&quot;pattern&quot;:&quot;\/kinh-doanh-online&quot;,&quot;title&quot;:&quot;Kinh Doanh Online&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:12},{&quot;pattern&quot;:&quot;\/tao-website&quot;,&quot;title&quot;:&quot;T\u1ea1o Website&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:13},{&quot;pattern&quot;:&quot;\/thue-hosting&quot;,&quot;title&quot;:&quot;Thu\u00ea Hosting&quot;,&quot;category&quot;:&quot;Hosting&quot;,&quot;priority&quot;:14}]},&quot;domains&quot;:{&quot;category&quot;:&quot;T\u00ean Mi\u1ec1n&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;\/ten-mien&quot;,&quot;title&quot;:&quot;Mua T\u00ean Mi\u1ec1n&quot;,&quot;category&quot;:&quot;T\u00ean Mi\u1ec1n&quot;,&quot;priority&quot;:1},{&quot;pattern&quot;:&quot;\/chuyen-ten-mien&quot;,&quot;title&quot;:&quot;Chuy\u1ec3n T\u00ean Mi\u1ec1n&quot;,&quot;category&quot;:&quot;T\u00ean Mi\u1ec1n&quot;,&quot;priority&quot;:2},{&quot;pattern&quot;:&quot;\/ten-mien-mien-phi&quot;,&quot;title&quot;:&quot;T\u00ean Mi\u1ec1n Mi\u1ec5n Ph\u00ed&quot;,&quot;category&quot;:&quot;T\u00ean Mi\u1ec1n&quot;,&quot;priority&quot;:3},{&quot;pattern&quot;:&quot;\/tld\/ten-mien-xyz&quot;,&quot;title&quot;:&quot;T\u00ean Mi\u1ec1n XYZ&quot;,&quot;category&quot;:&quot;T\u00ean Mi\u1ec1n&quot;,&quot;priority&quot;:4},{&quot;pattern&quot;:&quot;\/ten-mien-gia-re&quot;,&quot;title&quot;:&quot;T\u00ean Mi\u1ec1n Gi\u00e1 R\u1ebb&quot;,&quot;category&quot;:&quot;T\u00ean Mi\u1ec1n&quot;,&quot;priority&quot;:5},{&quot;pattern&quot;:&quot;\/tld&quot;,&quot;title&quot;:&quot;Domain&quot;,&quot;category&quot;:&quot;T\u00ean Mi\u1ec1n&quot;,&quot;priority&quot;:7},{&quot;pattern&quot;:&quot;\/whois&quot;,&quot;title&quot;:&quot;WHOIS&quot;,&quot;category&quot;:&quot;T\u00ean Mi\u1ec1n&quot;,&quot;priority&quot;:8},{&quot;pattern&quot;:&quot;\/chung-chi-SSL-mien-phi&quot;,&quot;title&quot;:&quot;SSL Mi\u1ec5n Ph\u00ed&quot;,&quot;category&quot;:&quot;T\u00ean Mi\u1ec1n&quot;,&quot;priority&quot;:30}]},&quot;information&quot;:{&quot;category&quot;:&quot;Th\u00f4ng tin&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;\/chuyen-website&quot;,&quot;title&quot;:&quot;Chuy\u1ec3n website&quot;,&quot;category&quot;:&quot;Th\u00f4ng tin&quot;,&quot;priority&quot;:1},{&quot;pattern&quot;:&quot;https:\/\/statuspage.hostinger.com\/&quot;,&quot;title&quot;:&quot;T\u00ecnh Tr\u1ea1ng H\u1ec7 Th\u1ed1ng&quot;,&quot;category&quot;:&quot;Th\u00f4ng tin&quot;,&quot;priority&quot;:2},{&quot;pattern&quot;:&quot;\/affiliate&quot;,&quot;title&quot;:&quot;Ch\u01b0\u01a1ng Tr\u00ecnh Affiliate&quot;,&quot;category&quot;:&quot;Th\u00f4ng tin&quot;,&quot;priority&quot;:3},{&quot;pattern&quot;:&quot;\/thanh-toan&quot;,&quot;title&quot;:&quot;Ph\u01b0\u01a1ng Th\u1ee9c Thanh To\u00e1n&quot;,&quot;category&quot;:&quot;Th\u00f4ng tin&quot;,&quot;priority&quot;:3},{&quot;pattern&quot;:&quot;\/phan-thuong&quot;,&quot;title&quot;:&quot;Trang Ph\u1ea7n Th\u01b0\u1edfng&quot;,&quot;category&quot;:&quot;Th\u00f4ng tin&quot;,&quot;priority&quot;:4},{&quot;pattern&quot;:&quot;\/danh-gia&quot;,&quot;title&quot;:&quot;\u0110\u00e1nh Gi\u00e1&quot;,&quot;category&quot;:&quot;Th\u00f4ng tin&quot;,&quot;priority&quot;:5},{&quot;pattern&quot;:&quot;\/bang-gia&quot;,&quot;title&quot;:&quot;B\u1ea3ng Gi\u00e1&quot;,&quot;category&quot;:&quot;Th\u00f4ng tin&quot;,&quot;priority&quot;:6},{&quot;pattern&quot;:&quot;\/sitemap&quot;,&quot;title&quot;:&quot;S\u01a1 \u0111\u1ed3 trang&quot;,&quot;category&quot;:&quot;Th\u00f4ng tin&quot;,&quot;priority&quot;:7}]},&quot;legal&quot;:{&quot;category&quot;:&quot;Ph\u00e1p L\u00fd&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;\/chinh-sach-rieng-tu&quot;,&quot;title&quot;:&quot;Ch\u00ednh S\u00e1ch B\u1ea3o M\u1eadt&quot;,&quot;category&quot;:&quot;Ph\u00e1p L\u00fd&quot;,&quot;priority&quot;:1},{&quot;pattern&quot;:&quot;\/thoa-thuan-dong-y-dieu-khoan-dich-vu-toan-cau&quot;,&quot;title&quot;:&quot;\u0110i\u1ec1u Kho\u1ea3n D\u1ecbch V\u1ee5&quot;,&quot;category&quot;:&quot;Ph\u00e1p L\u00fd&quot;,&quot;priority&quot;:2}]},&quot;company&quot;:{&quot;category&quot;:&quot;C\u00f4ng ty&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;\/ve-chung-toi&quot;,&quot;title&quot;:&quot;V\u1ec1 Hostinger&quot;,&quot;category&quot;:&quot;C\u00f4ng ty&quot;,&quot;priority&quot;:10},{&quot;pattern&quot;:&quot;\/cong-nghe-web&quot;,&quot;title&quot;:&quot;C\u00f4ng Ngh\u1ec7&quot;,&quot;category&quot;:&quot;C\u00f4ng ty&quot;,&quot;priority&quot;:20},{&quot;pattern&quot;:&quot;https:\/\/roadmap.hostinger.com\/&quot;,&quot;title&quot;:&quot;L\u1ed9 tr\u00ecnh&quot;,&quot;category&quot;:&quot;C\u00f4ng ty&quot;,&quot;priority&quot;:50},{&quot;pattern&quot;:&quot;\/lien-he&quot;,&quot;title&quot;:&quot;Li\u00ean H\u1ec7&quot;,&quot;category&quot;:&quot;C\u00f4ng ty&quot;,&quot;priority&quot;:60},{&quot;pattern&quot;:&quot;https:\/\/www.hostinger.com\/blog\/&quot;,&quot;title&quot;:&quot;Blog (Ti\u1ebfng Anh)&quot;,&quot;category&quot;:&quot;C\u00f4ng ty&quot;,&quot;priority&quot;:70}]},&quot;help&quot;:{&quot;category&quot;:&quot;Gi\u00fap \u0111\u1ee1&quot;,&quot;items&quot;:[{&quot;pattern&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/&quot;,&quot;title&quot;:&quot;H\u01b0\u1edbng D\u1eabn&quot;,&quot;category&quot;:&quot;Gi\u00fap \u0111\u1ee1&quot;,&quot;priority&quot;:1},{&quot;pattern&quot;:&quot;https:\/\/support.hostinger.com\/en\/&quot;,&quot;title&quot;:&quot;C\u01a1 S\u1edf Ki\u1ebfn Th\u1ee9c&quot;,&quot;category&quot;:&quot;Gi\u00fap \u0111\u1ee1&quot;,&quot;priority&quot;:2},{&quot;pattern&quot;:&quot;\/bao-cao-vi-pham&quot;,&quot;title&quot;:&quot;B\u00e1o C\u00e1o Vi Ph\u1ea1m&quot;,&quot;category&quot;:&quot;Gi\u00fap \u0111\u1ee1&quot;,&quot;priority&quot;:3}]}}" :payment-methods="[&quot;visa&quot;,&quot;mastercard&quot;,&quot;amex&quot;,&quot;discover&quot;,&quot;jcb&quot;,&quot;maestro&quot;,&quot;dinersclub&quot;]" payment-url="https://www.hostinger.vn/huong-dan/wp-content/themes/tutorialsthemeuplift/public/images/payments/2020/" payment-path="/thanh-toan" payment-btn="và nhiều hơn nữa" about="Chúng tôi là nhà cung cấp dịch vụ web hosting với sứ mệnh mang lại thành công cho mọi sự hiện diện trực tuyến. Chúng tôi làm điều đó bằng cách không ngừng cải tiến công nghệ máy chủ, cung cấp hỗ trợ chuyên nghiệp và làm cho trải nghiệm lưu trữ web trở nên liền mạch." :social-links="[{&quot;id&quot;:&quot;social_linkedin&quot;,&quot;url&quot;:&quot;https:\/\/www.linkedin.com\/company\/hostinger-international&quot;,&quot;img&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/social-icons\/footer\/linked-in.svg&quot;,&quot;alt&quot;:&quot;Linked-in logo&quot;},{&quot;id&quot;:&quot;social_facebook&quot;,&quot;url&quot;:&quot;https:\/\/www.facebook.com\/Hostinger&quot;,&quot;img&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/social-icons\/footer\/facebook.svg&quot;,&quot;alt&quot;:&quot;Facebook logo&quot;},{&quot;id&quot;:&quot;social_instagram&quot;,&quot;url&quot;:&quot;https:\/\/www.instagram.com\/hostinger_global\/&quot;,&quot;img&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/social-icons\/footer\/instagram.svg&quot;,&quot;alt&quot;:&quot;Instagram logo&quot;},{&quot;id&quot;:&quot;social_twitter&quot;,&quot;url&quot;:&quot;https:\/\/twitter.com\/hostinger&quot;,&quot;img&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/social-icons\/footer\/twitter.svg&quot;,&quot;alt&quot;:&quot;Twitter logo&quot;},{&quot;id&quot;:&quot;social_youtube&quot;,&quot;url&quot;:&quot;https:\/\/www.youtube.com\/HostingerAcademy?sub_confirmation=1&quot;,&quot;img&quot;:&quot;https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/themes\/tutorialsthemeuplift\/public\/images\/social-icons\/footer\/youtube.svg&quot;,&quot;alt&quot;:&quot;Youtube logo&quot;}]" copyright="© 2004-2022 hostinger.vn - Web Hosting Cao Cấp, Dịch vụ đăng ký tên miền & Cloud, VPS." no-vat-txt="Giá được liệt kê chưa VAT">
+    </Footer-new>
+  </div>
+</footer>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL4FQVG"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<script type="rocketlazyloadscript">
+  window.intercomSettings = {
+    app_id: "e5dnas5h"
+  };
+</script>
+<script type="rocketlazyloadscript">
+(function () {
+  var w = window;
+  var ic = w.Intercom;
+  if (typeof ic === "function") {
+    ic('reattach_activator');
+    ic('update', w.intercomSettings);
+  } else {
+    var d = document;
+    var i = function () {
+      i.c(arguments);
+    };
+    i.q = [];
+    i.c = function (args) {
+      i.q.push(args);
+    };
+    w.Intercom = i;
+    var l = function () {
+      setTimeout(function () {
+        var s = d.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'https://widget.intercom.io/widget/e5dnas5h';
+        var x = d.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }, 5000);
+    };
+    if (w.attachEvent) {
+      w.attachEvent('onload', l);
+    } else {
+      w.addEventListener('load', l, false);
+    }
+  }
+})();
+</script>
+<script type="rocketlazyloadscript">(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,71036,79832);</script><script type="rocketlazyloadscript" data-rocket-type="text/javascript">/* <![CDATA[ */!function(e,n){var r={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":2,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":false,"theme":"classic","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""},"resources":["https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/plugins\/enlighter\/cache\/X10_enlighterjs.min.css?ZSm9LHKDFYkAm+z","https:\/\/www.hostinger.vn\/huong-dan\/wp-content\/plugins\/enlighter\/resources\/enlighterjs\/enlighterjs.min.js"]},o=document.getElementsByTagName("head")[0],t=n&&(n.error||n.log)||function(){};e.EnlighterJSINIT=function(){!function(e,n){var r=0,l=null;function c(o){l=o,++r==e.length&&(!0,n(l))}e.forEach(function(e){switch(e.match(/\.([a-z]+)(?:[#?].*)?$/)[1]){case"js":var n=document.createElement("script");n.onload=function(){c(null)},n.onerror=c,n.src=e,n.async=!0,o.appendChild(n);break;case"css":var r=document.createElement("link");r.onload=function(){c(null)},r.onerror=c,r.rel="stylesheet",r.type="text/css",r.href=e,r.media="all",o.appendChild(r);break;default:t("Error: invalid file extension",e)}})}(r.resources,function(e){e?t("Error: failed to dynamically load EnlighterJS resources!",e):"undefined"!=typeof EnlighterJS?EnlighterJS.init(r.selectors.block,r.selectors.inline,r.options):t("Error: EnlighterJS resources not loaded yet!")})},(document.querySelector(r.selectors.block)||document.querySelector(r.selectors.inline))&&e.EnlighterJSINIT()}(window,console); /* ]]> */</script><script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://www.hostinger.vn/huong-dan/wp-content/cache/min/10/huong-dan/wp-content/themes/tutorialsthemeuplift/resources/js/web-font-loader.js?ver=1661962995' id='fontloader_js-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.vn/huong-dan/wp-content/themes/tutorialsthemeuplift/public/js/theme.min.js?ver=1.0.0.1671785142' id='understrap-scripts-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.vn/huong-dan/wp-includes/js/comment-reply.min.js?ver=6.1.1' id='comment-reply-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.vn/huong-dan/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js?ver=2.2.1' id='ez-toc-js-cookie-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.vn/huong-dan/wp-content/plugins/easy-table-of-contents/vendor/sticky-kit/jquery.sticky-kit.min.js?ver=1.9.2' id='ez-toc-jquery-sticky-kit-js' defer></script>
+<script type='text/javascript' id='ez-toc-js-js-extra'>
+    /* <![CDATA[ */
+    var ezTOC = {"smooth_scroll":"1","scroll_offset":"0"};
+    /* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://www.hostinger.vn/huong-dan/wp-content/plugins/easy-table-of-contents/assets/js/front.min.js?ver=2.0.40-1671784154' id='ez-toc-js-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" defer data-rocket-type='text/javascript' src='https://www.hostinger.vn/huong-dan/wp-content/cache/min/10/huong-dan/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1661963002' id='akismet-frontend-js'></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+    if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+    images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+    if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.hostinger.vn/huong-dan/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script>
+<script data-minify="1" src="https://www.hostinger.vn/huong-dan/wp-content/cache/min/10/huong-dan/wp-content/themes/tutorialsthemeuplift/public/js/vueapp.js?ver=1661962995" defer></script>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>
